@@ -210,7 +210,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/09/Github%20Pages%20+%20hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">Github Pages + hexo 搭建个人博客记录</a>
+            <a href="/2020/03/09/Github%20Pages%20+%20hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">Github Pages + hexo 搭建个人博客</a>
         </h1>
 
         <div class="post-meta">
@@ -221,11 +221,11 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-09 22:38:31 / 修改时间：19:01:32" itemprop="dateCreated datePublished" datetime="2020-03-09T22:38:31+08:00">2020-03-09</time>
+              <time title="创建时间：2020-03-09 23:07:57 / 修改时间：23:10:19" itemprop="dateCreated datePublished" datetime="2020-03-09T23:07:57+08:00">2020-03-09</time>
             </span>
 
           
-            <span id="/2020/03/09/Github%20Pages%20+%20hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="post-meta-item leancloud_visitors" data-flag-title="Github Pages + hexo 搭建个人博客记录" title="阅读次数">
+            <span id="/2020/03/09/Github%20Pages%20+%20hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="post-meta-item leancloud_visitors" data-flag-title="Github Pages + hexo 搭建个人博客" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -242,171 +242,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Github-Pages-hexo-搭建个人博客"><a href="#Github-Pages-hexo-搭建个人博客" class="headerlink" title="Github Pages + hexo 搭建个人博客"></a>Github Pages + hexo 搭建个人博客</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是本人写的第一篇博客。搭建这个博客是为了记录下自己学习过程中遇到与解决的问题，算是一种经验的积累。另一方面，通过对已学知识（技术）进行总结，提升自己的文字表达能力以及建立知识体系。初衷不是为了写给别人看的，所以也不担心别人认为没有价值。不过如果能帮助别人解决问题的话，那就更好了。</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是本人写的第一篇博客。搭建这个博客是为了记录下自己学习过程中遇到与解决的问题，算是一种经验的积累。另一方面，通过对已学知识（技术）进行总结，提升自己的文字表达能力以及建立知识体系。初衷不是为了写给别人看的，所以也不担心别人认为没有价值。不过如果能帮助别人解决问题的话，那就更好了。</p>
 <p>下面是众多博主分享的经验结合本人实际的建站流程。由于是在Windows环境下搭建，其他平台用户搭建过程细节会有所不同。</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="Hexo-简介"><a href="#Hexo-简介" class="headerlink" title="Hexo 简介"></a>Hexo 简介</h3><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a> 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。利用静态模板系统，即使没有网页前端开发经验，我们也能一定程度上个性化自己的博客页面。Github 官方推荐的是 <a href="https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll" target="_blank" rel="noopener">Jekll</a>，但我觉得搭建 jekll 需要的依赖环境比较复杂（ruby + python2），加上主题风格不太喜欢，所以改用 Hexo。当然 jekll 也有它的优点。</p>
-<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>Hexo 是基于 Node.js 编写的，所以需要安装 Node.js 和里面的 npm 工具。</p>
-<p>Node.js 为大多数平台提供了官方的<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">安装程序</a>。下载慢的话，可以尝试<a href="https://npm.taobao.org/mirrors/node" target="_blank" rel="noopener">淘宝 Node.js 镜像</a>。安装时保持默认设置即可。</p>
-<p>安装程序完成后，可以打开命令提示符检查是否成功安装：输入 <code>node -v</code>、<code>npm -v</code>，出现版本号则说明成功安装。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309152543140.png" alt="image-20200309152543140"></p>
-<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><p>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。也就是说，它是我们用来管理 hexo 博客文章，上传到 GitHub 的工具。</p>
-<p>到<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">官网</a>下载安装即可。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309023514325.png" alt="image-20200309023514325"></p>
-<p>安装完成后，桌面右键，点击 Git Bush Here，输入 <code>git --version</code>，出现版本号则说明 Git 安装成功。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309023810499.png" alt="image-20200309023810499"></p>
-<blockquote>
-<p><a href="https://gitforwindows.org/" target="_blank" rel="noopener">The BASH emulation behaves just like the “git” command in LINUX and UNIX environments.</a></p>
-<p>在Windows 上，通过 Git-Bash 模拟 LINUX 和 UNIX 环境下的 “git” 命令。</p>
-</blockquote>
-<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>所有必备的应用程序安装完成后，即可安装 Hexo。</p>
-<p>首先创建一个文件夹 Github （自定义），然后<code>cd</code>到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。依次输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>第一条命令表示安装 hexo，第二条命令表示安装 hexo 部署到 git page 的 deployer。安装过程中会出现警告，这是 Mac 上所需要的，并不影响我们使用。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309161640156.png" alt="image-20200309161640156"></p>
-<p>使用<code>hexo -v</code>检查是否成功安装。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309162352344.png" alt="image-20200309162352344"></p>
-<h3 id="Hexo-初始化配置"><a href="#Hexo-初始化配置" class="headerlink" title="Hexo 初始化配置"></a>Hexo 初始化配置</h3><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p>执行以下命令，执行完即可登录 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 查看效果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate  #或hexo -g</span><br><span class="line">$ hexo server    #或hexo -s</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309164305265.png" alt="image-20200309164305265"></p>
-<p>使用<code>crtl + c</code>停止服务。</p>
-<p>上述操作完成后，指定文件夹的目录如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy        	#需要部署的文件</span><br><span class="line">├── node_modules    #Hexo插件</span><br><span class="line">├── public          #生成的静态网页文件</span><br><span class="line">├── scaffolds      	#模板</span><br><span class="line">├── source          #博客正文和其他源文件，404、favicon、CNAME 都应该放在这里</span><br><span class="line">| ├── _drafts      	#草稿</span><br><span class="line">| └── _posts        #文章</span><br><span class="line">├── themes          #主题</span><br><span class="line">├── _config.yml    	#全局配置文件</span><br><span class="line">└── package.json    #npm 依赖等</span><br></pre></td></tr></table></figure>
-
-<h2 id="将博客部署到-Github-Pages-上"><a href="#将博客部署到-Github-Pages-上" class="headerlink" title="将博客部署到 Github Pages 上"></a>将博客部署到 Github Pages 上</h2><h3 id="创建项目仓库"><a href="#创建项目仓库" class="headerlink" title="创建项目仓库"></a>创建项目仓库</h3><p>如果没有 Github 账户，访问<a href="https://github.com/" target="_blank" rel="noopener">官网</a>，点击 Sign Up 注册账户。</p>
-<p>注册完成并登陆后，在点击个人主页右上角的加号，再点击 New repository 进行新建仓库。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309165441731.png" alt="image-20200309165441731"></p>
-<p>进入页面后，在 Repository name 的位置填写域名，格式是 <code>username.GitHub.io</code>。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309165846005.png" alt="image-20200309165846005"></p>
-<p>点击 Create repository 创建项目仓库。</p>
-<h3 id="配置-SSH-密钥"><a href="#配置-SSH-密钥" class="headerlink" title="配置 SSH 密钥"></a>配置 SSH 密钥</h3><p>接下来回到 Git Bash 中，输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your email@example.com&quot; #引号内换成自己的邮箱</span><br></pre></td></tr></table></figure>
-
-<p>过程中会提示你输入一个密码，这个密码会在提交项目时使用，如果为空的话提交项目时则不用输入，为了方便可以不输入密码。</p>
-<p>运行以下命令，将公钥的内容复制到系统粘贴板上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ clip &lt; ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>进入 Github 的 Setting 页面中，找到 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">SSH key</a> 的设置项， 选择<code>New SSH key</code>。</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309172927567.png" alt="image-20200309172927567"></p>
-<p>id_rsa 是你这台电脑的私人秘钥，id_rsa.pub 是公共秘钥。把公钥放在 GitHub 上，这样当你链接 GitHub 自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过 git 上传你的文件到 GitHub 上。</p>
-<h3 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h3><p>Git 会根据用户的名字和邮箱来记录提交，GitHub 也是用这些信息来做权限的处理，输入以下命令进行个人信息的设置，把名称和邮箱替换成你自己的，名字可以不是 GitHub 的昵称，但为了方便记忆，建议与 GitHub 一致。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;此处填你的用户名&quot;  </span><br><span class="line">$ git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>可以输入下面的命令，看设置是否成功：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309173350383.png" alt="image-20200309173350383"></p>
-<h3 id="配置-Deployment"><a href="#配置-Deployment" class="headerlink" title="配置 Deployment"></a>配置 Deployment</h3><p>用笔记本打开文件夹下的站点配置文件<code>_config.yml</code>，翻到最下面，找到``#Deployment`处</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309174755911.png" alt="image-20200309174755911"></p>
-<p>按照如下修需要注意的是：冒号后面记得空一格！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourname&#x2F;yourname.github.io.git #yourname改为Github用户名</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h3 id="部署到-Github-Pages"><a href="#部署到-Github-Pages" class="headerlink" title="部署到 Github Pages"></a>部署到 Github Pages</h3><p>在文件夹下分别执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean #删除旧的 public 文件</span><br><span class="line">$ hexo g  	  #生成新的 public 文件</span><br><span class="line">$ hexo d     #开始部署</span><br></pre></td></tr></table></figure>
-
-<p>如果出现以下错误，说明 deployer 没有成功安装</p>
-<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200309175916080.png" alt="image-20200309175916080"></p>
-<p>需要执行以下命令再安装一次：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>出现<code>INFO  Deploy done: git</code>表示已成功部署，可以通过 yourname.github.io 进行访问。</p>
-<h3 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h3><p>你可以执行下列命令来创建一篇新文章或者新的页面。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>您可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
-<p>然后在source/_post中打开对应的markdown文件，就可以开始编辑了。当你写完的时候，再输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>博客也会随之更新。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>写得好累，很多细节也没完全弄清楚，就先写到这了。</p>
-<p>主题设置、设计个人域名以及使用插件等可以参考下面的资料。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029" target="_blank" rel="noopener">hexo史上最全搭建教程</a> 、</p>
-<p><a href="https://www.jianshu.com/p/0af76a76b279" target="_blank" rel="noopener">Hexo + GitHub Pages 搭建博客的教程</a></p>
-<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a></p>
-<p><a href="https://blog.csdn.net/qq_36759224/article/details/82121420" target="_blank" rel="noopener">使用 Github Pages 和 Hexo 搭建自己的独立博客</a></p>
-<p><a href="https://blog.csdn.net/u011475210/article/details/79023429?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">从jekyll到hexo</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/09/Github%20Pages%20+%20hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Scar12">
-      <meta itemprop="description" content="记录用">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Babel">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/09/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-09 16:31:42" itemprop="dateCreated datePublished" datetime="2020-03-09T16:31:42+08:00">2020-03-09</time>
-            </span>
-
-          
-            <span id="/2020/03/09/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
       
     </div>
 
@@ -490,7 +335,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
