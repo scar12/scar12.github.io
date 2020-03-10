@@ -214,6 +214,12 @@
         </h1>
 
         <div class="post-meta">
+		
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -221,7 +227,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-10 12:14:10 / 修改时间：12:14:48" itemprop="dateCreated datePublished" datetime="2020-03-10T12:14:10+08:00">2020-03-10</time>
+              <time title="创建时间：2020-03-10 12:14:10 / 修改时间：15:37:15" itemprop="dateCreated datePublished" datetime="2020-03-10T12:14:10+08:00">2020-03-10</time>
             </span>
 
           
@@ -236,6 +242,98 @@
 
       
           <p>你好 (*´▽｀)ノノ</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://scar12.github.io/2020/03/10/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Scar12">
+      <meta itemprop="description" content="记录用">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scar12的笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/10/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git常用命令</a>
+        </h1>
+
+        <div class="post-meta">
+		
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-10 15:28:41 / 修改时间：23:02:43" itemprop="dateCreated datePublished" datetime="2020-03-10T15:28:41+08:00">2020-03-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><p><code>$ mkdir &lt;folder&gt;</code> 创建名为<code>&lt;folder&gt;</code>的文件夹。</p>
+<p><code>$ pwd</code> 获取当前目录</p>
+<p><code>$ git init</code> 初始化，把当前目录变成 Git 可管理的仓库。</p>
+<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200310210640968.png" alt="image-20200310210640968"></p>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/897271968352576" target="_blank" rel="noopener">工作区和暂存区</a></p>
+<p><code>$ git add &lt;file&gt;</code> 把文件添加到仓库（暂存区），可多次<code>add</code>不同文件。</p>
+<p><code>$ git commit -m &lt;message&gt;</code>  <strong>新建记录点</strong>，把文件提交到仓库（master）。可一次提交多个文件。<code>&lt;message&gt;</code> 是本次提交的说明。</p>
+<p><code>$ git status</code> 查看仓库（暂存区）当前状态，是否有未 commit 的修改。</p>
+<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200310212524303.png" alt="image-20200310212524303"></p>
+<p><code>$ git diff &lt;file&gt;</code> 查看修改内容（工作区版本与暂存区版本区别）。</p>
+<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200310213329525.png" alt="image-20200310213329525"></p>
+<p><code>$ git log</code> 查看提交日志。</p>
+<p><code>$ git log --pretty=oneline</code> 只显示<code>commit_id</code>（版本号）以及说明。</p>
+<p><code>$ git reset --hard HEAD^</code> 回退到上一个版本，回退N个版本写成<code>HEAD~N</code>。</p>
+<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200310215527252.png" alt="image-20200310215527252"></p>
+<p><code>$ git reflog</code> 查看所有命令记录。可以借此获取<code>log</code>命令无法查看的已回退的”新“版本号，通过<code>$ git reset --hard &lt;版本号&gt;</code>来恢复到“新”版本。</p>
+<p><img src="C:%5CUsers%5CScar12%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200310220938094.png" alt="image-20200310220938094"></p>
+<p>丢弃工作区修改:</p>
+<p><code>$ git checkout --file</code> 旧版Git</p>
+<p><code>$ git restore &lt;file&gt;</code> 新版</p>
+<p> 丢弃暂存区修改：</p>
+<p><code>$ git reset HEAD &lt;file&gt;</code>旧版</p>
+<p><code>$ git restore --staged &lt;file&gt;</code> 新版</p>
 
       
     </div>
@@ -273,6 +371,8 @@
         </h1>
 
         <div class="post-meta">
+		
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -286,8 +386,17 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-10 10:39:02" itemprop="dateModified" datetime="2020-03-10T10:39:02+08:00">2020-03-10</time>
+                <time title="修改时间：2020-03-10 15:37:00" itemprop="dateModified" datetime="2020-03-10T15:37:00+08:00">2020-03-10</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+                </span>
+            </span>
 
           
 
@@ -392,15 +501,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span></a>
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
 </div>
